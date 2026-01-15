@@ -4,7 +4,7 @@ import uvicorn
 app = FastAPI()
 
 @app.get("/")
-def exec1(id: int = None):
+def exec1(id: int = 0):
     print(id)
     result = 2 + id
     return {"sts": result}
