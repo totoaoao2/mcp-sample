@@ -5,8 +5,9 @@ app = FastAPI()
 
 @app.get("/")
 async def exec1():
-    # エラー：idは文字列型の変数だが、数値と加算しようとしている
-    result = 2 + id
+    # 修正：適切な変数名を使用し、正しい型で計算を行う
+    user_id = 3  # 例として数値の ID を使用
+    result = 2 + user_id
     return {"result": result}
 
 if __name__ == "__main__":
